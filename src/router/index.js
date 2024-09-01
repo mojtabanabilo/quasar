@@ -2,9 +2,11 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import VueToast from "vue-toast-notification";
 
+// components
+const ProductsCard = () => import("../template/ProductsCard.vue");
 
 Vue.use(VueToast);
-
+Vue.component("product-card", ProductsCard);
 
 import routes from "./routes";
 

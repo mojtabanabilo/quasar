@@ -10,6 +10,7 @@ const routes = [
           {
             path: "/products",
             component: () => import("../pages/Products.vue"),
+            meta: { keepAlive: true }
           },
           {
             path: "/users",

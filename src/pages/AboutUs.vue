@@ -2,7 +2,7 @@
   <q-page class="q-pa-md">
     <div class="column items-start justify-center">
       <div class="col-5 q-pa-md">
-        <h1>ABOUT</h1>
+        <p class="text-h3">ABOUT Us</p>
       </div>
       <div class="col-5 bg-grey-2 q-pa-md" >
         <p class="text-justify">
