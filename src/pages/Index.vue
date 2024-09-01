@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-teal-5 window-height">
-    <h1>index</h1>
+  <div class="window-height q-pa-xl">
     <router-view></router-view>
   </div>
 </template>
