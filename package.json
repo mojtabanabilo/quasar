@@ -18,12 +18,14 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
+    "@quasar/app": "^2.0.0",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^9.0.0",
     "eslint-webpack-plugin": "^2.0.0",
-    "eslint-config-prettier": "^8.1.0",
+    "html-webpack-plugin": "^4.5.2",
     "prettier": "^2.5.1",
-    "@quasar/app": "^2.0.0"
+    "webpack": "^4.47.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
