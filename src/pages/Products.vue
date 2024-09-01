@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <products-card v-for="(item) in product" :key="item.id" :card="item"></products-card>
+  <div class="grid-container">
+    <products-card
+      v-for="item in product"
+      :key="item.id"
+      :card="item"
+    ></products-card>
   </div>
 </template>
 
@@ -19,13 +23,14 @@ export default {
   async mounted() {
     this.product = await getProducts();
   },
-
-  watch: {
-    product() {
-      console.log(this.product);
-    },
-  },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+</style>

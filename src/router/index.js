@@ -4,13 +4,15 @@ import VueToast from "vue-toast-notification";
 
 // components
 const ProductsCard = () => import("../template/ProductsCard.vue");
+const UsersList = () => import("../template/UsersLists.vue");
 
-Vue.use(VueToast);
-Vue.component("product-card", ProductsCard);
 
 import routes from "./routes";
 
 Vue.use(VueRouter);
+Vue.use(VueToast);
+Vue.component("product-card", ProductsCard);
+Vue.component("user-list", UsersList);
 
 /*
  * If not building with SSR mode, you can

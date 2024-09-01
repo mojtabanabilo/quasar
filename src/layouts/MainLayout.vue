@@ -63,11 +63,5 @@ export default {
   async created() {
     this.category = await categories();
   },
-
-  watch: {
-    category() {
-      console.log(this.category);
-    },
-  },
 };
 </script>

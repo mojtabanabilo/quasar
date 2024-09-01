@@ -1,5 +1,5 @@
 <template>
-  <q-card class="my-card">
+  <q-card class="my-card p-none">
     <img :src="card.category.image" alt="Product Image" />
 
     <q-card-section>
