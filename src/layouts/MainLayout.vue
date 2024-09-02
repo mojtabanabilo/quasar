@@ -53,7 +53,7 @@ export default {
     };
   },
 
-  async created() {
+  async mounted() {
     this.category = await categories();
   },
 };

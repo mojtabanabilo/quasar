@@ -1,5 +1,6 @@
 <template>
-  <div v-if="user">
+  <spinner v-if="user === null" />
+  <div v-else>
     <q-toolbar class="bg-teal-5 text-white shadow-2" style="max-width: 650px">
       <q-toolbar-title>Users</q-toolbar-title>
     </q-toolbar>
