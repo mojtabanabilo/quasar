@@ -5,6 +5,7 @@ import VueToast from "vue-toast-notification";
 // components
 const ProductsCard = () => import("../template/ProductsCard.vue");
 const UsersList = () => import("../template/UsersLists.vue");
+const Spinner = () => import("../components/Spinner.vue");
 
 import routes from "./routes";
 
@@ -12,6 +13,7 @@ Vue.use(VueRouter);
 Vue.use(VueToast);
 Vue.component("product-card", ProductsCard);
 Vue.component("user-list", UsersList);
+Vue.component("spinner", Spinner);
 
 export default function () {
   const Router = new VueRouter({
