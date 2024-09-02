@@ -1,10 +1,7 @@
 <template>
-  <div class="grid-container">
-    <products-card
-      v-for="item in product"
-      :key="item.id"
-      :card="item"
-    ></products-card>
+  <div class="grid-container fit">
+    <spinner v-if="product === null" />
+    <products-card v-else v-for="item in product" :key="item.id" :card="item"></products-card>
   </div>
 </template>
 
