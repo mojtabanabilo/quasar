@@ -68,5 +68,9 @@ export default {
   async mounted() {
     this.category = await categories();
   },
+
+  beforeMount() {
+    if (this.$route.path !== '/aboutUs') this.$router.push('/aboutUs');
+  },
 };
 </script>
