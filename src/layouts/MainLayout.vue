@@ -1,22 +1,27 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header elevated class="bg-teal-5 text-white" height-hint="98">
-      <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="left = !left" />
+    <q-header elevated class="row justify-between items-center bg-teal-5 text-white" height-hint="98">
+      <div>
+        <q-toolbar>
+          <q-btn dense flat round icon="menu" @click="left = !left" />
 
-        <q-toolbar-title>
-          Online store
-        </q-toolbar-title>
-      </q-toolbar>
+          <q-toolbar-title>
+            Online store
+          </q-toolbar-title>
+        </q-toolbar>
 
-      <q-tabs align="left">
-        <q-route-tab to="/aboutUs" label="About Us" />
-        <q-route-tab to="/products" label="Products" />
-        <q-route-tab to="/users" label="Users" />
-      </q-tabs>
+        <q-tabs align="left">
+          <q-route-tab to="/aboutUs" label="About Us" />
+          <q-route-tab to="/products" label="Products" />
+          <q-route-tab to="/users" label="Users" />
+        </q-tabs>
+      </div>
+
+      <q-toggle v-model="theme" color="yellow" keep-color v-on:input="toggleDarkMode" />
+
     </q-header>
 
-    <q-drawer show-if-above v-model="left" side="left" bordered>
+    <q-drawer show-if-above v-model="left" side="left" bordered class="">
       <spinner v-if="category === null" />
       <div v-else class="q-pa-md" style="max-width: 350px">
         <q-list bordered separator>
@@ -50,7 +55,14 @@ export default {
     return {
       category: null,
       left: false,
+      theme: this.$q.dark.isActive,
     };
+  },
+
+  methods: {
+    toggleDarkMode() {
+      this.$q.dark.set(this.theme)
+    }
   },
 
   async mounted() {

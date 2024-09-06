@@ -4,7 +4,7 @@
       <div class="col-5 q-pa-md">
         <p class="text-h3">ABOUT Us</p>
       </div>
-      <div class="col-5 bg-grey-2 q-pa-md" >
+      <div v-bind:class="backgroundClass">
         <p class="text-justify">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem aut
           esse tenetur provident est odio temporibus delectus recusandae
@@ -33,5 +33,15 @@
     </div>
   </q-page>
 </template>
+
+<script>
+export default {
+  computed: {
+    backgroundClass() {
+      return this.$q.dark.isActive ? 'col-5 bg-grey-10 q-pa-md' : 'col-5 bg-grey-2 q-pa-md';
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped></style>
