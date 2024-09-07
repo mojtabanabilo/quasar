@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container fit">
+  <div class="grid-container fit overflow-hidden">
     <spinner v-if="product === null" />
     <products-card v-else v-for="item in product" :key="item.id" :card="item"></products-card>
   </div>
